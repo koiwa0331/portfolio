@@ -368,7 +368,7 @@ a:hover {
 p {
   margin: 0 0 40px;
   max-width: 45em;
-  padding: 0 .4em;
+  padding: 0 .8em;
 }
 caption {
   margin: 0 0 14px;
@@ -550,7 +550,6 @@ dt {
 }
 dt::before {
   content: '\f058';
-
 /*ver 4.7 */
   font-family: 'FontAwesome';
   font-size: 2em;
@@ -574,15 +573,6 @@ dd:not(:last-of-type) {
 }
 dd> :not(img):not(.wp-block-image):last-child {
   margin-bottom: 0;
-}
-dd:after {
-  border-bottom: 1px solid #9ca9b0;
-  bottom: 0;
-  content: '';
-  display: block;
-  left: 0;
-  position: absolute;
-  width: 110%;
 }
 dd ul+ p {
   margin: -6px 0 20px;
@@ -628,6 +618,10 @@ div> :last-child,
 p :last-child,
 li :last-child {
   margin-bottom: 0;
+}
+/* 最後が文章で終わる場合 */
+.is-root-container> p:last-child {
+  margin-bottom: 1em;
 }
 /* plugin Highlighting Code Block */
 .hcb_wrap {
@@ -717,6 +711,9 @@ li :last-child {
   dl img {
     margin: 12px 0;
   }
+  .is-root-container> p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -771,4 +768,68 @@ dt・dd 共に div で wrap されているので、margin だけ別途指定す
   [data-title='dd tag (Simple Definition List Blocks)']:not(:last-of-type) {
     margin: 0 0 2em;
   }
+}
+/* 下ボーダーはdlの左padding分だけ欠ける */
+div> dl {
+  position: relative;
+}
+div> dl::before,
+div> dl::after {
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+}
+div> dl::after {
+  border-bottom: 1px solid #9ca9b0;
+  width: 100%;
+  z-index: 1;
+}
+div> dl::before {
+  border-bottom: 1px solid #fff;
+  width: 0.4em;
+  z-index: 2;
+}
+/* ----- ここまで ----- */
+/*
+プラグインを利用した dl の入れ子レイアウト
+*/
+dl dl {
+  padding: 0.8em 0 0;
+}
+dl dl div:not(:last-of-type) {
+  margin: 0 0 1.2em;
+}
+dl dl dt {
+  margin: 0 0 0.4em;
+  padding: 0;
+  font-size: 15px;
+  text-shadow: none;
+}
+dl dl dt::before {
+  display: none;
+}
+dl dl dd {
+  padding: 0 0 0 1.3em;
+  white-space: normal;
+  /* 日本語は自然に改行 */
+  word-break: normal;
+  /* 日本語寄りの綺麗な改行 */
+  line-break: strict;
+  /* 英語のカンマやスペースでも折れる */
+  overflow-wrap: anywhere;
+}
+dl dl dd::after {
+  display: none;
+}
+dl dl dd:not(:last-of-type) {
+  margin: 0 0 1.2em;
+}
+/*
+ここまで
+*/
+.wp-block figure.wp-block-image,
+p.wp-block img {
+  margin: 24px 0;
 }

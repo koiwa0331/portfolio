@@ -35,35 +35,34 @@
               <!-- 投稿カード -->
               <article class="p-content u-border_content_outline">
                 <a href="<?php the_permalink(); ?>">
-                  
+                
                 <?php $tags = get_the_tags(); ?>
-                  
+                
                 <?php if (!empty($tags)) : ?> 
                   <!-- タグがある場合 -->
-                  <dl class="p-content-detail p-content-detail-with_icon">
+                  <dl class="p-content-detail p-content-detail--with_icon">
                 <?php else : ?> 
                   <!-- タグがない場合 -->
-                  <dl class="p-content-detail p-content-detail-without_icon">
+                  <dl class="p-content-detail">
                 <?php endif; ?>
-                    
+                
                     <dt>
                       <?php display_thumbnail() ?> 
                     </dt>
-                    <dd>
-                      
-                <?php if (is_home()) : ?> 
-                  <!-- トップページ -->
-                  <?php if (!empty($tpl_parent['child_id'])) : ?> 
-                    <!-- 子カテゴリ持ちの場合 -->
-                    <h4 class="c-small_head u-border_bright_gray">
-                      <span><?php the_title(); ?></span>
-                    </h4>
-                  <?php else : ?> 
-                    <!-- 子カテゴリ持ちでない場合 -->
-                    <h3 class="c-small_head u-border_bright_gray">
-                      <span><?php the_title(); ?></span>
-                    </h3>
-                  <?php endif; ?>
+                    <dd class="p-content-text">
+                  <?php if (is_home()) : ?> 
+                    <!-- トップページ -->
+                    <?php if (!empty($tpl_parent['child_id'])) : ?> 
+                      <!-- 子カテゴリ持ちの場合 -->
+                      <h4 class="c-small_head u-border_bright_gray">
+                        <span><?php the_title(); ?></span>
+                      </h4>
+                    <?php else : ?> 
+                      <!-- 子カテゴリ持ちでない場合 -->
+                      <h3 class="c-small_head u-border_bright_gray">
+                        <span><?php the_title(); ?></span>
+                      </h3>
+                    <?php endif; ?>
                   
                 <?php else : ?> 
                     <!-- カテゴリページ -->
@@ -78,25 +77,25 @@
                       <span><?php the_title(); ?></span>
                     </h2>
                   <?php endif; ?>
-                  
                 <?php endif; ?>
                     
-                    
-                    <?php the_excerpt(); ?>
-                    
-                    <!-- タグの出力 -->
-                  <?php if (!empty($tags)) : ?> 
-                    <ul class="p-content-icon_list u-en">
-                      <!-- タグのスラッグ名をクラス名として動的に指定する -->
-                      <?php foreach($tags as $tag) : ?> 
-                        <li class="c-icon u-bg-<?= $tag->slug; ?>">
-                          <?= $tag->name; ?>
-                        </li>
-                      <?php endforeach; ?>
-                    </ul>
-                  <?php endif; ?>
-                      
+                      <?php the_excerpt(); ?>
                     </dd>
+                    
+                  <!-- タグの出力 -->
+                  <?php if (!empty($tags)) : ?> 
+                    <dd class="p-content-icon_list-wrap">
+                      <ul class="p-content-icon_list u-en">
+                        <!-- タグのスラッグ名をクラス名として動的に指定する -->
+                        <?php foreach($tags as $tag) : ?> 
+                          <li class="c-icon u-bg-<?= $tag->slug; ?>">
+                            <?= $tag->name; ?>
+                          </li>
+                        <?php endforeach; ?>
+                      </ul>
+                    </dd>
+                  <?php endif; ?>
+                  
                   </dl>
                 </a>
               </article>

@@ -370,6 +370,7 @@ function existSourcePages($slug) {
 }
 */
 
+
 // アーカイブページのタイトルを取得する
 function get_archive_title() {
   //アーカイブページでない場合は false を返す
@@ -472,3 +473,42 @@ function admin_favicon() {
 }
 add_action('admin_head', 'admin_favicon');
 add_action('login_head', 'admin_favicon');
+
+
+// 年齢の取得
+function get_my_age( $birth_year, $birth_month, $birth_day ) {
+  $today = new DateTime();
+  $birthday = new DateTime("$birth_year-$birth_month-$birth_day");
+  // 差分から年齢取得
+  $age = $today->diff($birthday)->y;
+  return $age;
+}
+
+
+// URL をコピーする
+function copy_url_block_shortcode($atts) {
+  $atts = shortcode_atts(array(
+    'url' => 'https://example.com'
+  ), $atts, 'copy_url');
+  
+  // HTML を返す
+  return '<div class="copy-url-block" data-url="' . esc_url($atts['url']) . '">'
+        . '<p>' . esc_html($atts['url']) . '</p>'
+        . '<div class="copy-url-btn-wrap">'
+        . ' <button class="copy-url-btn">コピー</button>'
+        . '<div class="copy-url-tooltip">コピーしました</div>'
+        . '</div>'
+        . '</div>';
+}
+add_shortcode('copy_url', 'copy_url_block_shortcode');
+
+function enqueue_copy_url_script() {
+  wp_enqueue_script(
+      'copy-url-js',
+      get_stylesheet_directory_uri() . '/assets/js/copy-url.js',
+      array('jquery'),
+      '1.0',
+      true
+  );
+}
+add_action('wp_enqueue_scripts', 'enqueue_copy_url_script');

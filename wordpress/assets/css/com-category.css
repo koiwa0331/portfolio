@@ -2,26 +2,65 @@
 /* --------------------------------------------------
 utility
 -------------------------------------------------- */
+/* work */
+.u-bg-c-sharp {
+  background: #512bd4;
+}
+.u-bg-asp {
+  background: #512bd4;
+}
+.u-bg-sql-server {
+  background: #a91d22;
+}
+.u-bg-google-form {
+  background: #7248b9;
+}
+.u-bg-gas {
+  background: #fbbc04;
+  color: #000;
+}
+.u-bg-vue {
+  background: #41b883;
+}
+.u-bg-element-plus {
+  background: #409eff;
+}
+.u-bg-typescript {
+  background: #2d79c7;
+}
+.u-bg-graphql {
+  background: #e632ad;
+}
+.u-bg-vuetify {
+  background: #1867c0;
+}
+.u-bg-nestjs {
+  background: #e0234e;
+}
+
+
+/* practice */
 .u-bg-javascript {
-  background: #e06666;
+  background: #f7e018;
+  color: #000;
 }
 .u-bg-jquery {
-  background: #5e9ec3;
+  background: #0868ab;
 }
 .u-bg-ajax {
-  background: #5eb569;
+  background: #1984c7;
 }
 .u-bg-php {
-  background: #8272d8;
+  background: #787cb4;
 }
 .u-bg-c {
-  background: #e076c4;
+  background: #659bd3;
 }
 .u-bg-java {
-  background: #e2a700;
+  background: #ea2a30;
 }
 .u-bg-wordpress {
-  background: #3c74c7;
+  background: #21759b;
 }
 .u-bg-source {
   display: none;
@@ -184,6 +223,9 @@ project
 }
 .p-content-detail {
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .p-content-detail dt {
   text-align: center;
@@ -194,24 +236,27 @@ project
 /* この指定がないと幅が不足した状態で固定されてしまう */
   width: 100%;
 }
-.p-content-detail-with_icon dt {
-  padding: 34px 0 22px;
-}
-.p-content-detail-without_icon dt {
+.p-content-detail dt {
   padding: 14px 0 22px;
 }
 .p-content-detail p {
   font-size: 14px;
   padding: 0 .3em;
 }
+.p-content-icon_list-wrap {
+  padding: 0.1em 0 0;
+  order: -1;
+  margin: 0 0 -0.1em;
+  opacity: 0.85;
+}
 .p-content-icon_list {
   display: flex;
-  left: 0;
+  /* left: 0;
   position: absolute;
-  top: 0;
+  top: 0; */
   width: 100%;
 }
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 999px) {
   .p-content {
     width: 48%;
   }

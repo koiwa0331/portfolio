@@ -66,12 +66,10 @@ layout
   max-width: 1100px;
 }
 .l-inner {
-  /* width: 70%; */
   padding: 40px 2%;
 }
 @media screen and (max-width: 767px) {
   .l-inner {
-    /* width: 70%; */
     padding: 40px 2% 44px;
   }
 }
@@ -177,7 +175,7 @@ article
 .article p {
   margin: 0 0 40px;
   max-width: 45em;
-  padding: 0 .4em;
+  padding: 0 .8em;
 }
 .wp-block-group__inner-container> p:first-of-type {
   margin: 0 0 20px;
@@ -334,7 +332,6 @@ article
 }
 .article dl {
   margin: -.4em 0 40px;
-  overflow: hidden;
   padding: .4em .4em 0;
 }
 .article dt,
@@ -376,15 +373,34 @@ article
 .article dd> :not(img):not(.wp-block-image):last-child {
   margin-bottom: 0;
 }
-.article dd:after {
-  border-bottom: 1px solid #9ca9b0;
+/* 下ボーダーはdlの左padding分だけ欠ける */
+.article> dl,
+.article> div dl {
+  position: relative;
+}
+.article> dl::before,
+.article> dl::after,
+.article> div dl::before,
+.article> div dl::after {
   bottom: 0;
   content: '';
   display: block;
   left: 0;
   position: absolute;
-  width: 110%;
 }
+.article> dl::after,
+.article> div dl::after {
+  border-bottom: 1px solid #9ca9b0;
+  width: 100%;
+  z-index: 1;
+}
+.article> dl::before,
+.article> div dl::before {
+  border-bottom: 1px solid #fff;
+  width: 0.4em;
+  z-index: 2;
+}
+/* ----- ここまで ----- */
 .article dd ul+ p {
   margin: -6px 0 20px;
 }
@@ -392,6 +408,38 @@ article
   margin: 0 0 20px;
   padding: 0;
 }
+/*
+プラグインを利用した dl の入れ子レイアウト
+*/
+.article dl dl {
+  padding: 0.8em 0 0;
+}
+.article dl dl div:not(:last-of-type) {
+  margin: 0 0 1.2em;
+}
+.article dl dl dt {
+  margin: 0 0 0.4em;
+  padding: 0;
+  font-size: 15px;
+  text-shadow: none;
+}
+.article dl dl dt::before {
+  display: none;
+}
+.article dl dl dd {
+  padding: 0 0 0 1.3em;
+  white-space: normal;
+  /* 日本語は自然に改行 */
+  word-break: normal;
+  /* 日本語寄りの綺麗な改行 */
+  line-break: strict;
+  /* 英語のカンマやスペースでも折れる */
+  overflow-wrap: anywhere;
+}
+.article dl dl dd::after {
+  display: none;
+}
+/* ここまで */
 .wp-block-image {
   display: flex;
   flex-wrap: wrap;
@@ -423,9 +471,13 @@ article
 /* article の最後の子要素の余白を削除する */
 .article> :last-child,
 .article div> :last-child,
-.article p :last-child,
+.article p :last-child:not(img),
 .article li :last-child {
   margin-bottom: 0;
+}
+/* 最後が文章で終わる場合 */
+.article> p:last-child {
+  margin-bottom: 1em;
 }
 /* plugin Table of Contents Plus ---------- */
 #toc_container {
@@ -527,6 +579,9 @@ article
   .article dt img,
   .article dl img {
     margin: 12px 0;
+  }
+  .article> p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -939,4 +994,90 @@ sample_nav
     opacity: .5;
   }
 }
-
+/* URL コピーボタン */
+.copy-url-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.7em 1.2em;
+}
+.copy-url-block p {
+  margin: 0 !important;
+  line-height: 1.5;
+}
+.copy-url-btn-wrap {
+  position: relative;
+  flex: 0 0 auto;
+  width: 8em;
+}
+.copy-url-btn {
+  background: #389b360f;
+  color: #389b36;
+  border: 2px solid #389b36a6;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .25s ease-out, border .25s ease-out, color .25s ease-out;
+}
+.copy-url-btn:hover {
+  /* opacity: 0.7; */
+  background: #389b36;
+  border: 2px solid #389b36;
+  color: #fff;
+}
+.copy-url-tooltip {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 5px 10px 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  background: #888;
+  left: 0;
+  top: 100%;
+  margin: 5px 0 0 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+/* アニメーション用のエフェクト */
+.copy-url-tooltip.animateable {
+  animation: tooltipScale 2s ease-in forwards;
+  transform: scale(0.7);
+}
+@keyframes tooltipScale {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  95% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    /* transform: scale(1.1); */
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 583px) {
+  .copy-url-block {
+    justify-content: space-between;
+  }
+  .copy-url-block p {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+  .copy-url-btn-wrap {
+    width: auto;
+  }
+  .copy-url-tooltip {
+    right: 0;
+    left: auto;
+  }
+}

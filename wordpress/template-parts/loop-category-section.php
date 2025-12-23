@@ -28,8 +28,6 @@
           </h1>
         <?php endif; ?>
           
-          
-          
       <?php if (!empty($tpl_parent['children_id'])) : ?>
           <!-- 子カテゴリがある場合 -->
         <?php foreach($tpl_parent['children_id'] as $child_id) : ?>

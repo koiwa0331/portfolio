@@ -59,21 +59,21 @@
           $slug = $post->post_name;
           $url = home_url();
           
-          // [0] ： [D:\Documents\Tasks\xampp\htdocs\koiwa555_wp/]
+          // [0] ： [D:\Documents\Tasks\xampp\htdocs\koiwa0331_wp/]
           // [1] ： [wp-content/themes/own]
           $path = explode('/wp-content', get_template_directory());
           $demo_dir = '/demo/' . $slug . '/';
           
           // ディレクトリ
-          // D:\Documents\Tasks\xampp\htdocs\koiwa555_wp/demo/js_smooth_scroll/
+          // D:\Documents\Tasks\xampp\htdocs\koiwa0331_wp/demo/js_smooth_scroll/
           // echo $path[0] . $demo_dir;
           
           // URL
-          // http://localhost/koiwa555_wp/demo/js_smooth_scroll/
+          // http://localhost/koiwa0331_wp/demo/js_smooth_scroll/
           // echo home_url() . $demo_dir;
           
           // GitHub の URL
-          $source_url = "https://github.com/koiwa555/portfolio/tree/main/";
+          $source_url = "https://github.com/koiwa0331/portfolio/tree/main/";
           
           // スラッグ名を用いたディレクトリが存在すれば、デモページが存在することになる
           $is_demo = file_exists($path[0] . $demo_dir);

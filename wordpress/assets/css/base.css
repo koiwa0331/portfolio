@@ -126,7 +126,7 @@ body {
   font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   font-size: 16px;
   letter-spacing: .1em;
-  line-height: 1.8;
+  line-height: 1.9;
   position: relative;
 
 /* word-break: break-all; */
@@ -246,18 +246,6 @@ utility css
 .u-bg_bright_gray {
   background: #d4d4d8;
 }
-/* @media screen and (max-width: 767px) {
-  .u-pc_br {
-    display: none;
-  }
-  .u-pc_img {
-    display: none;
-  }
-  .u-sp_img {
-    display: block;
-    margin: 0 auto;
-  }
-} */
 
 
 /* --------------------------------------------------
@@ -266,9 +254,9 @@ component
 .c-icon {
   border-radius: 3px;
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   margin: 0 .6em 0 0;
-  padding: 2px .6em 1px;
+  padding: 3px .6em 0px;
   /* transition: .15s ease-out; */
 }
 .c-btn {
@@ -419,7 +407,7 @@ footer {
 }
 .footer_nav {
   font-size: 12px;
-  padding: 24px 0 24px;
+  padding: 32px 0 24px;
   text-align: left;
 }
 .footer_nav .parent {
@@ -428,11 +416,15 @@ footer {
 }
 .footer_nav .parent> li> a {
   font-weight: bold;
+  font-size: 15px;
 }
-.footer_nav .parent> li:not(:last-of-type) {
+.footer_nav .parent> li:nth-of-type(1) {
   margin: 0 18% 0 0;
 }
-.footer_nav .parent> li> a span::before {
+.footer_nav .parent> li:nth-of-type(2) {
+  margin: 0 15% 0 0;
+}
+.footer_nav .parent li li> a span::before {
   content: '-';
   display: inline-block;
   padding: 0 .3em 0 0;
@@ -442,11 +434,11 @@ footer {
 .footer_nav a:hover span {
   opacity: .5;
 }
-.footer_nav .children li {
-  margin: .5em 0 0;
+.footer_nav .children {
+  padding: 0 0 0 0.3em;
 }
-.footer_nav .children a span {
-  padding: 0 0 0 .8em;
+.footer_nav .children li {
+  margin: .7em 0 0;
 }
 footer p {
   border-top: 1px solid rgba(255, 255, 255, .2);
@@ -456,7 +448,7 @@ footer p {
 }
 @media screen and (max-width: 767px) {
   .footer_nav {
-    padding: 0;
+    padding: 16px 0;
   }
   .footer_nav .parent {
     display: block;
@@ -465,19 +457,11 @@ footer p {
     margin: 0;
   }
   .footer_nav a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 1em 12px;
-    position: relative;
-  }
-  .footer_nav a::after {
-    border-bottom: 2px dotted #2d2d2d;
-    bottom: 0;
-    content: '';
-    display: block;
-    left: 0;
-    margin: 0 0 0 2%;
-    position: absolute;
-    width: 96%;
+    height: 58px;
   }
   .footer_nav .parent li:last-of-type .children li:last-of-type a::after {
     display: none;
@@ -488,7 +472,13 @@ footer p {
   .footer_nav a span {
     display: block;
     margin: 0 auto;
-    width: 5.4em;
+    width: auto;
+  }
+  .footer_nav .children {
+    padding: 0;
+  }
+  .footer_nav .parent li li> a span::before {
+    display: none;
   }
   .footer_nav .children li {
     margin: 0;

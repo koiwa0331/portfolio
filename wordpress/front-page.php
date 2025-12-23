@@ -89,7 +89,7 @@
                 <h3 class="prof-intro-head c-middle_head u-jp">小岩 洋志<span>（コイワ ヒロシ）</span></h3>
                 <dl class="prof-intro-list">
                   <dt>年齢：</dt>
-                  <dd>37歳</dd>
+                  <dd><?= get_my_age(1985, 12, 22); ?>歳</dd>
                   <dt>性別：</dt>
                   <dd>男</dd>
                   <dt>趣味：</dt>
@@ -123,8 +123,8 @@
               <li class="career-past-list-item">⑤ 1年間プログラミングの職業訓練を受講
                 <p class="career-past-list-item_inner">C言語・Java・SQLなどを学び、設計と仕様書に沿ったプログラムの構築について学びました。</p>
               </li>
-              <li class="career-past-list-item">④ プログラマとして約9カ月ほど従事
-                <p class="career-past-list-item_inner">Vue.js+TypeScript（Class Style）でのアプリケーション開発にて、機能の実装とデザインの改善を行いました。</p>
+              <li class="career-past-list-item">④ プログラマとして約3年ほど従事
+                <p class="career-past-list-item_inner">Vue.js・ASP.NET Coreなどでのアプリケーション開発にて、UIデザインや機能の実装を行っています。</p>
               </li>
               
             </ol>
@@ -134,18 +134,13 @@
               <span class="career-future-head-inner u-hiragana">これから<span class="u-en u-block">From now on</span></span>
             </h3>
             <p class="career-future-txt">
-              現在は前職のプロジェクトで携わったVue.jsとTypeScriptについて理解を深めるため、就職活動の合間に勉強しております。いずれは同プロジェクトのAPIの言語であったNestJsも学んでいきたいと考えています。<br>
-              これまでの経験と現在学んでいるスキルとを合わせ、フロント・バックエンド双方に対応できるプログラマとして、社会に貢献していくことを目指しています。
+            UIデザインを強みとして、これまで培った経験を活かし、チームで協力しながら、ユーザー満足度を高めたプロダクトを作り上げていきたいと考えています。<br><br>
+            エンジニアとしての実務経験はまだ浅いですが、開発者としてプロジェクトに貢献できるよう努め、デザイン面での知見共有や改善提案を通じて、多くの人にとって価値のある体験を提供していきたいです。
             </p>
           </section><!-- h3 -->
           
           <a class="pdf_link u-before_symbol u-en" href="Hiroshi_Koiwa_Portfolio.pdf" target="_blank">
             <p class="pdf_link-txt">
-              <!--
-              <span class="pdf_link-txt-main u-br">PDF</span>
-              <span class="pdf_link-txt-sub">Portfolio</span>
-              -->
-              <!-- PDF仮対処 -->
               <span class="pdf_link-txt-main u-br">WELCOME</span>
               <span class="pdf_link-txt-sub">to my site</span>
             </p>
@@ -153,7 +148,6 @@
         </div>
       </div>
     </section><!-- h2 #prof -->
-    
     
     <section id="skill" class="skill">
       <div class="l-outer">
@@ -163,372 +157,107 @@
             <span class="u-before_symbol u-after_symbol">Skill</span>
           </h2>
           <div class="skill-detail_wrap">
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">JavaScript + jQuery</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>言語の基本理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>プラグインの理解と改変
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>ajaxでのデータの受け渡し
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">Vue.js + TypeScript (Class Style)</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>基本理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>Vuetifyの活用
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>共通コンポーネントの作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">AWS</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>各サービスの基本理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>ネットワークの構築
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>サーバーの構築
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">PHP</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>言語の基本理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>ファイル書き込み・画像アップロード
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>簡易ショッピングカートの作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-inline_block_parent">
-                <span class="u-en">SQL</span></span>
-                <span class="u-jp">（データベース）</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>JDBCによるDBへの接続と操作
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>データベースの正規化
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>ER図の作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-inline_block_parent">
-                <span class="u-en">Wordpress</span></span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>基本理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>自作テーマの作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>プラグインの活用
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">Java</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>継承・例外の文法に即したプログラミング
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>JSP + Servletでのプログラミング
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>コレクションの利用
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-inline_block_parent">
-                <span class="u-en">C</span>
-                <span class="u-jp">言語</span>
-              </h3>
-              <ul class="skill-detail-list">
-              <li>構造体を利用したプログラミング
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>メモリ破壊を考慮したプログラミング
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>リスト構造の理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">HTML LS + CSS3</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>タグ要素とCSSの理解
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>デザインカンプを元にしたページ作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>CSS3でのアニメーション効果の活用
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-en">Photoshop + Illustrator</span>
-              </h3>
-              <ul class="skill-detail-list">
-                <li>写真のレタッチ
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>Web用パーツの作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-                <li>印刷物の作成
-                  <span class="skill-star">
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star u-font_yellow" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </span>
-                </li>
-              </ul>
-            </section>
-            
-            <section class="skill-detail">
-              <h3 class="skill-detail-head c-middle_head u-jp">
-                <span class="u-jp">開発環境</span>
+            <section class="skill-detail skill-detail--front">
+              <h3 class="skill-detail-head c-middle_head">
+                <span class="u-jp">フロントエンド</span>
               </h3>
               <dl class="skill-detail-list">
-                <dt>OS<span>：</span></dt>
-                <dd>Windows 10・CentOS 7</dd>
-                <dt>Git<span>：</span></dt>
-                <dd>コマンドライン・GitHub・Sourcetree</dd>
-                <dt>その他<span>：</span></dt>
-                <dd>XAMPP・MySQL Workbench</dd>
-                <dt>エディタ<span>：</span></dt>
-                <dd>Visual Studio Code・Dreamweaver</dd>
+                <div>
+                  <dt>言語</dt>
+                  <dd>HTML5, CSS3, JavaScript, TypeScript, C#</dd>
+                </div>
+                <div>
+                  <dt>フレームワーク</dt>
+                  <dd>Razor, Vue.js 3</dd>
+                </div>
+                <div>
+                  <dt>ライブラリ</dt>
+                  <dd>Element Plus, Vuetify, Vue Apollo</dd>
+                </div>
+              </dl>
+            </section><!-- h3 -->
+            
+            <section class="skill-detail skill-detail--back">
+              <h3 class="skill-detail-head c-middle_head">
+                <span class="u-jp">バックエンド</span>
+              </h3>
+              <dl class="skill-detail-list">
+                <div>
+                  <dt>言語</dt>
+                  <dd>C#, TypeScript, PHP, （学習：Java, C）</dd>
+                </div>
+                <div>
+                  <dt>フレームワーク</dt>
+                  <dd>ASP.NET Core MVC（.NET 8）, （学習：Servlet/JSP）</dd>
+                </div>
+                <div>
+                  <dt>API</dt>
+                  <dd>GraphQL</dd>
+                </div>
+                <div>
+                  <dt>ORM</dt>
+                  <dd>Entity Framework Core</dd>
+                </div>
+              </dl>
+            </section><!-- h3 -->
+            
+            <section class="skill-detail skill-detail--db">
+              <h3 class="skill-detail-head c-middle_head">
+                <span class="u-jp">データベース</span>
+              </h3>
+              <dl class="skill-detail-list">
+                <div>
+                  <dt>DBMS</dt>
+                  <dd>SQL Server, PostgreSQL, MySQL</dd>
+                </div>
+                <div>
+                  <dt>管理ツール</dt>
+                  <dd>SQL Server Management Studio, pgAdmin, MySQL Workbench</dd>
+                </div>
+              </dl>
+            </section><!-- h3 -->
+            
+            <section class="skill-detail skill-detail--infra">
+              <h3 class="skill-detail-head c-middle_head">
+                <span class="u-jp">インフラ</span>
+              </h3>
+              <dl class="skill-detail-list">
+                <div>
+                  <dt>OS</dt>
+                  <dd>Windows Server, Linux</dd>
+                </div>
+                <div>
+                  <dt>Webサーバー</dt>
+                  <dd>IIS, nginx</dd>
+                </div>
+                <div>
+                  <dt>クラウド</dt>
+                  <dd>（学習：AWS）</dd>
+                </div>
+              </dl>
+            </section><!-- h3 -->
+            
+            <section class="skill-detail skill-detail--other">
+              <h3 class="skill-detail-head c-middle_head">
+                <span class="u-jp">その他</span>
+              </h3>
+              <dl class="skill-detail-list">
+                <div>
+                  <dt>バージョン管理</dt>
+                  <dd>GitHub, Backlog (Git), Sourcetree</dd>
+                </div>
+                <div>
+                  <dt>CMS</dt>
+                  <dd>WordPress</dd>
+                </div>
+                <div>
+                  <dt>エディタ</dt>
+                  <dd>Visual Studio Code, Dreamweaver</dd>
+                </div>
+                <div>
+                  <dt>デザインツール</dt>
+                  <dd>Figma, Photoshop, Illustrator, Fireworks</dd>
+                </div>
               </dl>
             </section><!-- h3 -->
             
@@ -537,7 +266,6 @@
         </div><!-- .skill-outer -->
       </div><!-- .skill-outer -->
     </section><!-- h3 #skill -->
-    
     
     <?php
     // $categories (トップレベルのカテゴリ一覧) はヘッダナビで既に取得済

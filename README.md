@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# portfolio
-=======
-# portfolio
->>>>>>> origin/main
-=======
-# portfolio
->>>>>>> origin/main
+# タイトル
+koiwa0331のポートフォリオ
+
+## 概要
+本リポジトリは、個人ポートフォリオとして作成したサイトで利用しているソースコードです。
